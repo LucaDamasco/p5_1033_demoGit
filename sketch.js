@@ -41,6 +41,7 @@ function speedDown() {
 function draw() {
   background(220);
   
+  fill(255, 0, 0);
   ellipse(cx, cy, 50);
   
   cx += vx;
