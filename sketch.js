@@ -1,11 +1,17 @@
 let buttonSpeedUp;
 let buttonSpeedDown;
 
+let img;
+
 let cx = 0;
 let cy = 0;
 let cSize = 50;
 let vx = 1;
 let vy = 1;
+
+function preload () {
+  img = loadImage('/images/bball.png');
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -62,6 +68,8 @@ function draw() {
   textSize(36);
   textAlign(CENTER);
   text(`VX: ${vx.toFixed(1)} | VY: ${vy.toFixed(1)}`, width/2, height/2);
+  
+  image(img, width/2, height/2);
 }
 
 function repositionButtons() {
